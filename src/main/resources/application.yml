@@ -1,0 +1,37 @@
+app.image.path: images
+app.cors.url: http://localhost:4200
+
+spring:
+  datasource:
+#    url: ${DATASOURCE_URL}
+#    username: ${DATASOURCE_USERNAME}
+#    password: ${DATASOURCE_PASSWORD}
+    url: jdbc:postgresql://localhost:5432/streamify
+    username: postgres
+    password: Shree@123
+
+  jpa:
+#    database-platform: ${DATABASE_DIALECT}
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#    properties:
+#      hibernate:
+#        format_sql: true
+
+  servlet:
+    multipart:
+      max-file-size:2MB
+      max-request-size:2MB
+
+  mail:
+    host: smtp.gmail.com
+    username: gizmoholic.app@gmail.com
+    password: gnemritvgbzwielf
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls.enable: true
